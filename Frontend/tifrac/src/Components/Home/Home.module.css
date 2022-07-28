@@ -1,0 +1,114 @@
+.prfirstbanner
+{
+    border:1px solid red;
+    height:10%;
+    margin-top: 10%;
+    width:80%;
+    margin: auto;
+}
+.prfirstbanner >div:nth-child(1)
+{
+    border:1px solid black;
+    font-size: 4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10%;
+}
+.prfirstbanner >div:nth-child(2)
+{
+    border:1px solid black;
+    font-size: 4rem;
+    color:#29abfc;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+.prawards
+{   margin-top:2%;
+    border: 1px solid blue;
+    height:5%;
+    width:80%;
+    margin:auto;
+    font-size: 2rem;
+    color:grey;
+    margin-bottom: 15px;
+}
+.prallawards
+{   
+    width:80%;
+    margin:auto;
+   
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    gap:15px;
+    margin-bottom: 5%;
+}
+.prindiawards
+{
+   width:95%;
+   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   display:flex;
+   border-radius: 10px;
+   height:15vh;
+
+}
+.prforall
+{
+    
+    width:80%;
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.prforall >div:nth-child(1)
+{ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width:40%;
+  font-size: 4rem;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.prlearning
+{   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:40%;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-bottom: 5%;
+   
+}
+.prboards
+{  
+    width:40%;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    height:auto;
+    justify-content: space-around;
+    align-items: center;
+   border-radius: "10px";
+   margin-bottom: 3%;
+}
+.prboardsandexam
+{  
+    width:40%;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+    height:20vh;
+   
+   border-radius: "10px";
+   margin-bottom: 5%;
+}
+.prtalktosales
+{
+   width:40%;
+   margin:auto;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   font-size:2rem;
+   height:auto;
+   background-color:green;
+   color:white;
+   border-radius: 10px;
+}
+
