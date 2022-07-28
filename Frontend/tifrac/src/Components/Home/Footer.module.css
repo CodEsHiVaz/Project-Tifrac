@@ -1,0 +1,63 @@
+.footermain
+{
+    border:1px solid green;
+    height:60vh;
+    background-color: #2e2d3a;
+    margin-top: 5%;
+}
+.prfooterleft
+{
+    display:flex;
+ 
+    width:100%;
+    margin:auto;
+    justify-content: space-around;
+    color:white;
+    height:100%;
+    cursor: pointer;
+}
+.prfooterright
+{
+    display:flex;
+   
+    width:100%;
+    height:100%;
+    margin:auto;
+    justify-content: space-around;
+    color:white;
+    margin-top: 0%;
+    cursor: pointer;
+}
+.prfooterright>div :hover
+{
+    font-weight: 600;
+}
+.prfooterleft :hover
+{
+    font-weight: 600;
+}
+.prfooterend
+{   margin-top: 3%;
+ 
+    display:flex;
+    width:20%;
+    margin:auto;
+    justify-content: space-around;
+    height:8vh;
+    cursor: pointer;
+    display: flex;
+    gap:10px
+}
+.prfooterend>div
+{   display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width:6vw;
+    cursor: pointer;
+   text-align: center;
+    border:1px solid white;
+    border-radius: 50%;
+   
+   
+}

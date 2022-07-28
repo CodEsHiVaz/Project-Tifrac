@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "./Navbar";
 import styles from "./Home.module.css"
 import {useNavigate} from "react-router-dom"
+import { Footer } from "./Footer";
 const Home = () => {
 let [talk,setTalk]=React.useState(false)
 let [mail,setMail]=React.useState({email:""})
@@ -42,8 +43,11 @@ localStorage.setItem("usermail",mail.email)
 setTalk(false)
 window.location.href="https://silver-fox-54971d.netlify.app"
    }
-  return <div>
-    <Navbar/>
+  return (
+  <>
+  <Navbar/>
+  
+    
     <div className={styles.prfirstbanner}>
       <div>Better Learning. Better Result.</div>
       <div>One Platform for all your science learning.</div>
@@ -124,7 +128,9 @@ window.location.href="https://silver-fox-54971d.netlify.app"
   
    <div onClick={()=>setTalk(true)} className={styles.prtalktosales}>Talk to us</div>
   
-  </div>;
+  <Footer/>
+  </>
+  )
 };
 
 export default Home;

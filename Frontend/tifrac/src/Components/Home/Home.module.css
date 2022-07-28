@@ -1,6 +1,6 @@
 .prfirstbanner
 {
-    border:1px solid red;
+    /* border:1px solid red; */
     height:10%;
     margin-top: 10%;
     width:80%;
@@ -8,14 +8,14 @@
 }
 .prfirstbanner >div:nth-child(1)
 {
-    border:1px solid black;
+    /* border:1px solid black; */
     font-size: 4rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 10%;
 }
 .prfirstbanner >div:nth-child(2)
 {
-    border:1px solid black;
+    /* border:1px solid black; */
     font-size: 4rem;
     color:#29abfc;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,7 +23,7 @@
 }
 .prawards
 {   margin-top:2%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height:5%;
     width:80%;
     margin:auto;
