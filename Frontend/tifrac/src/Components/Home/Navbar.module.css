@@ -1,0 +1,121 @@
+.prmaincontainer
+{
+  
+    display: flex;
+    height:8vh;
+    justify-content: space-around;
+    position:fixed;
+    /* z-index: 10000; */
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+.prhelpercontainer{
+  
+    width: 20%;
+    text-align: center;
+    font-size:xx-large;
+    font-weight: 600;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   
+    
+}
+.prsubjectcontainer{
+    display: flex;
+    gap:5%;
+    padding-top: 1%;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    width:40%;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+}
+.prsubjectcontainer>div
+{
+    color:grey;
+}
+.prloginsignup
+{
+    display: flex;
+    gap:5%;
+  
+ 
+    width:20%;
+    justify-content: space-around;
+    text-align: center;
+}
+.prlogsignindi
+{
+    border-radius: 10px;
+    height:95%;
+    width:45%;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4%;
+    box-sizing: border-box;
+    background-color:#1a202c;
+    color:white;
+}
+
+@media(max-width:700px)
+{   .prmaincontainer
+    {
+      
+        display: flex;
+        height:10vh;
+        justify-content: space-between;
+        position:fixed;
+        width:100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .prhelpercontainer{
+  
+        /* width: 5%; */
+        text-align: center;
+        font-size:xx-large;
+        font-weight: 500;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .prsubjectcontainer{
+        display: flex;
+   
+        padding-top: 3%;
+        box-sizing: border-box;
+        width:30%;
+        justify-content: space-around;
+        text-align: center;
+      
+    }
+    .prsubjectcontainer>div
+{
+    color:grey;
+}
+.prloginsignup
+{
+    display: flex;
+   
+
+ 
+    width:20%;
+    justify-content: space-around;
+    text-align: center;
+}
+.prlogsignindi
+{
+    border-radius: 10px;
+    height:95%;
+    width:45%;
+    display:flex;
+  
+    padding-top: 15%;
+    background-color:#1a202c;
+    color:white;
+}
+}
