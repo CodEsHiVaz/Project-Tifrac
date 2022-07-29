@@ -2,8 +2,11 @@
 HELPER is a one stop destination for the students of 12th grade to sharpen their physics, chemistry, maths and biology. 
 
 HELPER provides video lectures for a wide variety of topics in each of the above mentioned field. 
+TECH stack used: MongoDB, Express, React, NodeJS.
 
-Glimpses of our website.
+Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
+
+<b>Pages</b>
 1) Home page
 
    The home page has a navbar that contains routes to different subject pages and also the login and signup.
@@ -24,10 +27,10 @@ Glimpses of our website.
   
   On clicking any subject in the navbar the student will be routed to that particular subject's page. The data for the subject comes from the backend. 
   
-  On clicking on any topic withing the subject page the user will be able to see a list of available videos for that particular topic. We also provide the students with   cheatsheets for each and every topic. 
+  On clicking on any topic withing the subject page the user will be able to see a list of available videos for that particular topic. We also provide the students       with cheatsheets for each and every topic. 
   
 4) Videochat.
 
-   A student can connect to our representative by simply clicking on the "Talk to us now" button. On clicking this button the student will be routed to a different        site. Here the student can simply click on the copy ID button to get his ID. Now clicking on the 
+   A student can connect to our representative by simply clicking on the "Talk to us now" button. On clicking this button the student will be routed to a different        site. Here the student can simply click on the copy ID button to get his ID. Now click on the "Click here to mail" and simply paste the id into the body of the mail    and click send. Within minutes the student will receive a videocall from our representative.
 
 Netlify Deploy link :https://profound-cupcake-844742.netlify.app/
