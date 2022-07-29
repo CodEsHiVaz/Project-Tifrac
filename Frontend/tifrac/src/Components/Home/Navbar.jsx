@@ -15,14 +15,26 @@ export const Navbar = () => {
   let gotohome = () => {
     navigate("/")
   }
+  let gotoPhy = () => {
+    navigate("/physics")
+  }
+  let gotoChem = () => {
+    navigate("/chemistry")
+  }
+  let gotoMath = () => {
+    navigate("/maths")
+  }
+  let gotoBio = () => {
+    navigate("/biology")
+  }
   return (
     <div className={styles.prmaincontainer}>
       <div onClick={gotohome} className={styles.prhelpercontainer}>HELPER</div>
       <div className={styles.prsubjectcontainer}>
-        <div>PHYSICS</div>
-        <div>CHEMISTRY</div>
-        <div>MATHS</div>
-        <div>BIOLOGY</div>
+        <div onClick={gotoPhy}>PHYSICS</div>
+        <div onClick={gotoChem}>CHEMISTRY</div>
+        <div onClick={gotoMath}>MATHS</div>
+        <div onClick={gotoBio}>BIOLOGY</div>
       </div>
       {!isAuth && <div className={styles.prloginsignup}>
         <div onClick={gotologin} className={styles.prlogsignindi}>Login</div>
