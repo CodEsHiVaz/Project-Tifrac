@@ -38,6 +38,7 @@
 .prsubjectcontainer>div
 {
     color:grey;
+    cursor: pointer;
 }
 .prloginsignup
 {
