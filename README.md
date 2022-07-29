@@ -3,6 +3,7 @@
 HELPER is a one stop destination for the students of 12th grade to sharpen their physics, chemistry, maths and biology. 
 
 HELPER provides video lectures for a wide variety of topics in each of the above mentioned field. 
+
 TECH stack used: MongoDB, Express, React, NodeJS.
 
 Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
