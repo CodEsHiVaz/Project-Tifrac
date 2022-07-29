@@ -1,11 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
+import axios from "axios";
 const Signup = () => {
+  const [user, setUser] = useState({});
+  const [mailid, setMailid] = useState("");
+  const [password, setpassword] = useState("");
   const navigate = useNavigate();
   const closeButton = () => {
     navigate("/");
   };
+  const handleCallbackRsponse = (response) => {
+    const userobj = jwt_decode(response.credential);
+    console.log("userobj", response);
+    setUser(userobj);
+    document.getElementById("signInDiv").hidden = true;
+
+    navigate("/");
+  };
+
+  // localStorage.setItem("userofHack", JSON.stringify({ key: "" }));
+  const handelsubmit = (e) => {
+    e.preventDefault();
+    console.log(mailid, password);
+    const userdata = { mailid, password };
+
+    axios
+      .post("http://localhost:8080/auth/signup", {
+        mailid: mailid,
+        password: password,
+      })
+      .then((response) => navigate("/login"))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id:
+        "63948009420-m19eji2a0tlmo9kocr7m092r0ns1gd7d.apps.googleusercontent.com",
+      callback: handleCallbackRsponse,
+    });
+    google.accounts.id.renderButton(document.getElementById("signInDiv"), {
+      theme: "filled_blue",
+      size: "large",
+      shape: "circle",
+      text: "continue_with",
+    });
+
+    google.accounts.id.disableAutoSelect();
+    google.accounts.id.prompt();
+  }, []);
+
   return (
     <div className={styles.login_container}>
       <div>
@@ -17,9 +63,25 @@ const Signup = () => {
           alt=""
         />
       </div>
-      <div>
-        <input type="text" placeholder="Enter your mail id" />
-        <input type="password" placeholder="Enter your password" />
+      <div className={styles.container_input}>
+        <form onSubmit={handelsubmit}>
+          <input
+            type="text"
+            placeholder="Enter your mail id"
+            onChange={(e) => setMailid(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            onChange={(e) => setpassword(e.target.value)}
+          />
+          <button className={styles.actionbutton} type="submit">
+            Signup
+          </button>
+        </form>
+        <h4>- or -</h4>
+        <div className={styles.signInDiv} id="signInDiv"></div>
+        {/* <button onClick={signout}>Sign out</button> */}
       </div>
     </div>
   );
