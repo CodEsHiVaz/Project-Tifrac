@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
 import axios from "axios";
@@ -65,12 +65,12 @@ const Login = () => {
 
       <div className={styles.container_input}>
         <form onSubmit={handelsubmit}>
+          <p className={styles.nouserwarn}> {nouser && "User Not Found !"} </p>
           <input
             type="text"
             placeholder="Enter your mail id"
             onChange={(e) => setMailid(e.target.value)}
           />
-          {/* <p className={styles.nouserwarn}> {nouser && "User Not Found !"} </p> */}
           <input
             type="password"
             placeholder="Enter your password"
@@ -82,6 +82,7 @@ const Login = () => {
         </form>
         <h4>- or -</h4>
         <div className={styles.signInDiv} id="signInDiv"></div>
+        <Link to={"/signup"}>New to HELPER ? create an account </Link>
       </div>
     </div>
   );
