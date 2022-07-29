@@ -3,19 +3,22 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
+import axios from "axios";
 const Login = () => {
+  const [user, setUser] = useState({});
+  const [mailid, setMailid] = useState("");
+  const [password, setpassword] = useState("");
   const navigate = useNavigate();
   const closeButton = () => {
     navigate("/");
   };
-  const [user, setUser] = useState({});
   const handleCallbackRsponse = (response) => {
     const userobj = jwt_decode(response.credential);
     console.log("userobj", response);
     setUser(userobj);
     document.getElementById("signInDiv").hidden = true;
 
-    localStorage.setItem("userofHack", JSON.stringify(userobj || {}));
+    // localStorage.setItem("userofHack", JSON.stringify(userobj.email));
 
     navigate("/");
   };
@@ -23,13 +26,23 @@ const Login = () => {
     google.accounts.id.disableAutoSelect();
 
     setUser({});
-    localStorage.setItem("userofHack", JSON.stringify({ key: "" }));
-    navigate("/");
+    // localStorage.setItem("userofHack", JSON.stringify({ key: "" }));
+    navigate("/signup");
+  };
+  const handelsubmit = (e) => {
+    e.preventDefault();
+    console.log(mailid, password);
+    // const userdata = { mailid, password };
+
+    axios
+      .post("http://localhost:8080/auth/login", {
+        mailid: mailid,
+        password: password,
+      })
+      .then((response) => navigate("/"))
+      .catch((err) => console.log(err));
   };
   useEffect(() => {
-    let localdata = JSON.parse(localStorage.getItem("userofHack"));
-    console.log(`🚀 ~ useEffect ~ localdata`, localdata);
-    // console.log(localdata);
     /* global google */
     google.accounts.id.initialize({
       client_id:
@@ -39,7 +52,8 @@ const Login = () => {
     google.accounts.id.renderButton(document.getElementById("signInDiv"), {
       theme: "filled_blue",
       size: "large",
-      shape: "circle",
+      shape: "rectangular",
+      text: "continue_with",
     });
 
     google.accounts.id.disableAutoSelect();
@@ -58,11 +72,24 @@ const Login = () => {
         />
       </div>
       <div className={styles.container_input}>
-        <input type="text" placeholder="Enter your mail id" />
-        <input type="password" placeholder="Enter your password" />
-        <h4>or</h4>
-        <div id="signInDiv"></div>
-        <button onClick={signout}>Sign out</button>
+        <form onSubmit={handelsubmit}>
+          <input
+            type="text"
+            placeholder="Enter your mail id"
+            onChange={(e) => setMailid(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            onChange={(e) => setpassword(e.target.value)}
+          />
+          <button className={styles.actionbutton} type="submit">
+            Login
+          </button>
+        </form>
+        <h4>- or -</h4>
+        <div className={styles.signInDiv} id="signInDiv"></div>
+        {/* <button onClick={signout}>Sign out</button> */}
       </div>
     </div>
   );
