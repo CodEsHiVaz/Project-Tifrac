@@ -1,14 +1,14 @@
 .footermain
 {
-    border:1px solid green;
-    height:60vh;
+   
+    height:50vh;
     background-color: #2e2d3a;
     margin-top: 5%;
+    box-sizing: border-box;
 }
 .prfooterleft
 {
     display:flex;
- 
     width:100%;
     margin:auto;
     justify-content: space-around;

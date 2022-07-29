@@ -21,6 +21,7 @@
    justify-content: center;
    align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
    
     
 }
@@ -42,11 +43,10 @@
 {
     display: flex;
     gap:5%;
-  
- 
     width:20%;
     justify-content: space-around;
     text-align: center;
+    
 }
 .prlogsignindi
 {
@@ -60,6 +60,7 @@
     box-sizing: border-box;
     background-color:#1a202c;
     color:white;
+    cursor: pointer;
 }
 
 @media(max-width:700px)

@@ -3,7 +3,7 @@ import styles from "./Footer.module.css"
 export const Footer = () => {
   return (
     <div className={styles.footermain}>
-        <hr style={{marginTop:"5%",width:"80%"}} />
+        <hr style={{marginTop:"5vh",width:"80%"}} />
         <div style={{marginTop:"10vh",display:"flex",justifyContent:"space-around"}}>
             {/* Left div */}
             

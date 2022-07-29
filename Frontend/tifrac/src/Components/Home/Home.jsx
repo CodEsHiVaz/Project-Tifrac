@@ -32,16 +32,16 @@ let exams=[{examlnk:"https://static-cf.toppr.com/marketing/7af27c4/images/home/e
             {examlnk:"https://static-cf.toppr.com/marketing/7af27c4/images/home/exams/nstse-50.png"},
             {examlnk:"	https://static-cf.toppr.com/marketing/7af27c4/images/home/exams/sat-50.png"},]
            
-  let handleChange=(e)=>{
-   e.preventDefault()
-   setMail({...mail,[e.target.name]:e.target.value})
-  }
+  // let handleChange=(e)=>{
+  //  e.preventDefault()
+  //  setMail({...mail,[e.target.name]:e.target.value})
+  // }
   let handleSubmit=()=>{
    
-console.log(mail)
-localStorage.setItem("usermail",mail.email)
-setTalk(false)
-window.location.href="https://friendly-pothos-7ba9cc.netlify.app/"
+// console.log(mail)
+// localStorage.setItem("usermail",mail.email)
+// setTalk(false)
+window.location.href="https://melodious-smakager-c7e4db.netlify.app/"
 //https://silver-fox-54971d.netlify.app
 // https://friendly-pothos-7ba9cc.netlify.app/
    }
@@ -88,7 +88,7 @@ window.location.href="https://friendly-pothos-7ba9cc.netlify.app/"
    <div style={{width:"80%",margin:"auto",display:"flex",justifyContent:"space-between"}}>
       <div className={styles.prboards}>
         { boards.map((el)=>(
-          <div style={{height:"60%",width:"60%",margin:"auto"}}>
+          <div style={{height:"80%",width:"35%",margin:"auto"}}>
             <img src={el.brdlnk} style={{height:"100%",width:"100%"}}/>
           </div>
         ))
@@ -98,7 +98,7 @@ window.location.href="https://friendly-pothos-7ba9cc.netlify.app/"
       
        <div className={styles.prboards}>
         { exams.map((el)=>(
-          <div style={{height:"60%",width:"60%",margin:"auto"}}>
+          <div style={{height:"80%",width:"35%",margin:"auto"}}>
             <img src={el.examlnk} style={{height:"100%",width:"100%",textAlign:"center"}}/>
           </div>
         ))
@@ -125,11 +125,10 @@ window.location.href="https://friendly-pothos-7ba9cc.netlify.app/"
       </div>
 
    </div>
-   {talk && <div style={{width:"40%",marginBottom:"2%",height:"5vh",margin:"auto",fontWeight:"800"}}><p >Our representative will send the meeting id to the entered mail.</p></div>}
-   {talk && <div style={{width:"80%",margin:"auto"}}><input value={mail.email} name="email" onChange={(e)=>handleChange(e)} style={{width:"40%",marginTop:"-30%",marginBottom:"2%",height:"5vh",border:"1px solid green",textAlign:"center"}}placeholder="Please enter your mail-id"/> <button onClick={handleSubmit} style={{width:"20%",marginBottom:"2%",height:"5vh",backgroundColor:"green",color:"white"}}>Submit</button></div>}
+   {/* {talk && <div style={{width:"40%",marginBottom:"2%",height:"5vh",margin:"auto",fontWeight:"800"}}><p >Our representative will send the meeting id to the entered mail.</p></div>}
+   {talk && <div style={{width:"80%",margin:"auto"}}><input value={mail.email} name="email" onChange={(e)=>handleChange(e)} style={{width:"40%",marginTop:"-30%",marginBottom:"2%",height:"5vh",border:"1px solid green",textAlign:"center"}}placeholder="Please enter your mail-id"/> <button onClick={handleSubmit} style={{width:"20%",marginBottom:"2%",height:"5vh",backgroundColor:"green",color:"white"}}>Submit</button></div>} */}
   
-   <div onClick={()=>setTalk(true)} className={styles.prtalktosales}>Talk to us anytime..</div>
-  
+   <div onClick={handleSubmit} className={styles.prtalktosales}>Talk to us now</div>
   <Footer/>
   </>
   )
