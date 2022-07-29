@@ -1,0 +1,40 @@
+.mainAt {
+  display: flex;
+  gap: 2%;
+  margin: auto;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 17%;
+}
+.leftAt {
+  width: 15%;
+  height: 600px;
+  position: fixed;
+  left: 1rem;
+}
+.middleAt {
+  width: 68%;
+  height: 1000px;
+}
+.rightAt {
+  width: 28%;
+  height: 600px;
+}
+.midTitle {
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: Manrope;
+  margin-left: 6rem;
+  text-align: left;
+}
+.dataTitle {
+  margin-left: 4rem;
+  text-align: left;
+}
+.dataTitle:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+  height: 4.5rem;
+  padding-left: 10px;
+  width: 80%;
+  cursor: pointer;
+}
