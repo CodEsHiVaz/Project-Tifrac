@@ -1,0 +1,28 @@
+.mainDivAt {
+  display: flex;
+  justify-content: center;
+}
+.vidAt {
+  width: 400px;
+  height: 200px;
+  margin: 5rem;
+}
+.cheatsheetAt {
+  margin: 5rem;
+  text-decoration: none;
+  color: black;
+}
+.cheatSingAt {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.cheatImgAt {
+  width: 400px;
+}
+.videoParaAt {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 0rem;
+  font-size: 500;
+}

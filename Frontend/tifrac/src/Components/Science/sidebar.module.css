@@ -1,0 +1,21 @@
+.titleAt {
+  font-size: xx-large;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.linkSidebarAt {
+    color: rgb(87, 88, 88);
+    text-decoration: none;
+}
+
+.linkSidebarDivAt {
+    margin: 1rem;
+    justify-content: space-around;
+    text-align: left;
+  }
