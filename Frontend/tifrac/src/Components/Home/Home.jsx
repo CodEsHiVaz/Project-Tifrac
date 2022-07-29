@@ -41,7 +41,9 @@ let exams=[{examlnk:"https://static-cf.toppr.com/marketing/7af27c4/images/home/e
 console.log(mail)
 localStorage.setItem("usermail",mail.email)
 setTalk(false)
-window.location.href="https://silver-fox-54971d.netlify.app"
+window.location.href="https://friendly-pothos-7ba9cc.netlify.app/"
+//https://silver-fox-54971d.netlify.app
+// https://friendly-pothos-7ba9cc.netlify.app/
    }
   return (
   <>
@@ -126,7 +128,7 @@ window.location.href="https://silver-fox-54971d.netlify.app"
    {talk && <div style={{width:"40%",marginBottom:"2%",height:"5vh",margin:"auto",fontWeight:"800"}}><p >Our representative will send the meeting id to the entered mail.</p></div>}
    {talk && <div style={{width:"80%",margin:"auto"}}><input value={mail.email} name="email" onChange={(e)=>handleChange(e)} style={{width:"40%",marginTop:"-30%",marginBottom:"2%",height:"5vh",border:"1px solid green",textAlign:"center"}}placeholder="Please enter your mail-id"/> <button onClick={handleSubmit} style={{width:"20%",marginBottom:"2%",height:"5vh",backgroundColor:"green",color:"white"}}>Submit</button></div>}
   
-   <div onClick={()=>setTalk(true)} className={styles.prtalktosales}>Talk to us</div>
+   <div onClick={()=>setTalk(true)} className={styles.prtalktosales}>Talk to us anytime..</div>
   
   <Footer/>
   </>
