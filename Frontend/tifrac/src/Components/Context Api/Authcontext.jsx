@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   };
   const login = () => {
     axios
-      .post("http://localhost:8080/auth/login", {
+      .post("https://backend-for-tifrac.herokuapp.com/auth/login", {
         mailid: mailid,
         password: password,
       })
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   };
   const signup = () => {
     axios
-      .post("http://localhost:8080/auth/signup", {
+      .post("https://backend-for-tifrac.herokuapp.com/auth/signup", {
         mailid: mailid,
         password: password,
       })
