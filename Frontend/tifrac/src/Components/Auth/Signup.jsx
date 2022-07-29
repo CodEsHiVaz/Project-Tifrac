@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
 import axios from "axios";
@@ -69,6 +69,9 @@ const Signup = () => {
         </form>
         <h4>- or -</h4>
         <div className={styles.signInDiv} id="signInDiv"></div>
+        <Link to={"/login"}>
+          Alrerady have an account ? Login to your account{" "}
+        </Link>
       </div>
     </div>
   );
