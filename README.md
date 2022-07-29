@@ -1,4 +1,5 @@
 # Project-Tifrac
+
 HELPER is a one stop destination for the students of 12th grade to sharpen their physics, chemistry, maths and biology. 
 
 HELPER provides video lectures for a wide variety of topics in each of the above mentioned field. 
@@ -25,9 +26,9 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
 
 3) Subjects page.
   
-  On clicking any subject in the navbar the student will be routed to that particular subject's page. The data for the subject comes from the backend. 
+   On clicking any subject in the navbar the student will be routed to that particular subject's page. The data for the subject comes from the backend. 
   
-  On clicking on any topic withing the subject page the user will be able to see a list of available videos for that particular topic. We also provide the students       with cheatsheets for each and every topic. 
+   On clicking on any topic withing the subject page the user will be able to see a list of available videos for that particular topic. We also provide the students       with cheatsheets for each and every topic. 
   
 4) Videochat.
 
