@@ -4,43 +4,34 @@ import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
 import axios from "axios";
+import { Authcontext } from "../Context Api/Authcontext";
+import { useContext } from "react";
 const Login = () => {
+  const {
+    authkey,
+    login,
+    setMailid,
+    setpassword,
+    nouser,
+    loginhandler,
+    mailid,
+    password,
+  } = useContext(Authcontext);
   const [user, setUser] = useState({});
-  const [mailid, setMailid] = useState("");
-  const [password, setpassword] = useState("");
   const navigate = useNavigate();
   const closeButton = () => {
     navigate("/");
   };
   const handleCallbackRsponse = (response) => {
     const userobj = jwt_decode(response.credential);
-    console.log("userobj", response);
     setUser(userobj);
     document.getElementById("signInDiv").hidden = true;
-
-    // localStorage.setItem("userofHack", JSON.stringify(userobj.email));
-
-    navigate("/");
+    loginhandler(userobj.email);
   };
-  const signout = () => {
-    google.accounts.id.disableAutoSelect();
 
-    setUser({});
-    // localStorage.setItem("userofHack", JSON.stringify({ key: "" }));
-    navigate("/signup");
-  };
   const handelsubmit = (e) => {
     e.preventDefault();
-    console.log(mailid, password);
-    // const userdata = { mailid, password };
-
-    axios
-      .post("http://localhost:8080/auth/login", {
-        mailid: mailid,
-        password: password,
-      })
-      .then((response) => navigate("/"))
-      .catch((err) => console.log(err));
+    login();
   };
   useEffect(() => {
     /* global google */
@@ -71,6 +62,7 @@ const Login = () => {
           alt=""
         />
       </div>
+
       <div className={styles.container_input}>
         <form onSubmit={handelsubmit}>
           <input
@@ -78,6 +70,7 @@ const Login = () => {
             placeholder="Enter your mail id"
             onChange={(e) => setMailid(e.target.value)}
           />
+          {/* <p className={styles.nouserwarn}> {nouser && "User Not Found !"} </p> */}
           <input
             type="password"
             placeholder="Enter your password"
@@ -89,7 +82,6 @@ const Login = () => {
         </form>
         <h4>- or -</h4>
         <div className={styles.signInDiv} id="signInDiv"></div>
-        {/* <button onClick={signout}>Sign out</button> */}
       </div>
     </div>
   );

@@ -1,38 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import styles from "./Login.module.css";
 import axios from "axios";
+import { Authcontext } from "../Context Api/Authcontext";
 const Signup = () => {
+  const { signup, setMailid, setpassword, loginhandler } =
+    useContext(Authcontext);
   const [user, setUser] = useState({});
-  const [mailid, setMailid] = useState("");
-  const [password, setpassword] = useState("");
   const navigate = useNavigate();
   const closeButton = () => {
     navigate("/");
   };
   const handleCallbackRsponse = (response) => {
     const userobj = jwt_decode(response.credential);
-    console.log("userobj", response);
     setUser(userobj);
     document.getElementById("signInDiv").hidden = true;
-
-    navigate("/");
+    loginhandler(userobj.email);
   };
-
-  // localStorage.setItem("userofHack", JSON.stringify({ key: "" }));
   const handelsubmit = (e) => {
     e.preventDefault();
-    console.log(mailid, password);
-    const userdata = { mailid, password };
-
-    axios
-      .post("http://localhost:8080/auth/signup", {
-        mailid: mailid,
-        password: password,
-      })
-      .then((response) => navigate("/login"))
-      .catch((err) => console.log(err));
+    signup();
   };
   useEffect(() => {
     /* global google */
@@ -81,7 +69,6 @@ const Signup = () => {
         </form>
         <h4>- or -</h4>
         <div className={styles.signInDiv} id="signInDiv"></div>
-        {/* <button onClick={signout}>Sign out</button> */}
       </div>
     </div>
   );
