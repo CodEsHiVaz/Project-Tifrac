@@ -1,30 +1,40 @@
 import React from 'react'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Authcontext } from '../Context Api/Authcontext'
 import styles from "./Navbar.module.css"
 export const Navbar = () => {
-  let navigate=useNavigate()
-  let gotologin=()=>{
+  let navigate = useNavigate()
+  const { isAuth, signout } = useContext(Authcontext)
+  let gotologin = () => {
     navigate("/login")
   }
-  let gotosignup=()=>{
+  let gotosignup = () => {
     navigate("/signup")
   }
-  let gotohome=()=>{
+  let gotohome = () => {
     navigate("/")
   }
   return (
     <div className={styles.prmaincontainer}>
-        <div onClick={gotohome}className={styles.prhelpercontainer}>HELPER</div>
-        <div className={styles.prsubjectcontainer}>
-            <div>PHYSICS</div>
-            <div>CHEMISTRY</div>
-            <div>MATHS</div>
-            <div>BIOLOGY</div>
+      <div onClick={gotohome} className={styles.prhelpercontainer}>HELPER</div>
+      <div className={styles.prsubjectcontainer}>
+        <div>PHYSICS</div>
+        <div>CHEMISTRY</div>
+        <div>MATHS</div>
+        <div>BIOLOGY</div>
+      </div>
+      {!isAuth && <div className={styles.prloginsignup}>
+        <div onClick={gotologin} className={styles.prlogsignindi}>Login</div>
+        <div onClick={gotosignup} className={styles.prlogsignindi}>Signup</div>
+      </div>
+      }
+      { isAuth && <div className={styles.prloginsignup}>
+        <div  onClick={signout} className={styles.prlogsignindi}>Signout</div>
         </div>
-        <div className={styles.prloginsignup}>
-            <div onClick={gotologin}className={styles.prlogsignindi}>Login</div>
-            <div onClick={gotosignup} className={styles.prlogsignindi}>Signup</div>
-        </div>
+
+      }
+
     </div>
   )
 }

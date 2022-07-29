@@ -3,9 +3,13 @@ import { Navbar } from "./Navbar";
 import styles from "./Home.module.css"
 import {useNavigate} from "react-router-dom"
 import { Footer } from "./Footer";
+import { useContext } from "react";
+import { Authcontext } from "../Context Api/Authcontext";
 const Home = () => {
 let [talk,setTalk]=React.useState(false)
 let [mail,setMail]=React.useState({email:""})
+const {isAuth}=useContext(Authcontext)
+const navigate=useNavigate()
 let awardarr=[{imglink:"https://static-cf.toppr.com/marketing/7af27c4/images/home/Award.svg",catg:"Best Tech in Education",by:"IAMAI India Digital Awards 2019"},
               {imglink:"https://static-cf.toppr.com/marketing/7af27c4/images/home/Award_GlobalEdTech.svg",catg:"Top 50 Growth Companies",by:"GSV Global Edtech 2020"},
               {imglink:"https://static-cf.toppr.com/marketing/7af27c4/images/home/Award.svg",catg:"Best in Education Industry",by:"AWS Mobility Awards 2017"},
@@ -45,6 +49,9 @@ window.location.href="https://melodious-smakager-c7e4db.netlify.app/"
 //https://silver-fox-54971d.netlify.app
 // https://friendly-pothos-7ba9cc.netlify.app/
    }
+   let gotosignup = () => {
+    navigate("/signup")
+  }
   return (
   <>
   <Navbar/>
@@ -127,8 +134,8 @@ window.location.href="https://melodious-smakager-c7e4db.netlify.app/"
    </div>
    {/* {talk && <div style={{width:"40%",marginBottom:"2%",height:"5vh",margin:"auto",fontWeight:"800"}}><p >Our representative will send the meeting id to the entered mail.</p></div>}
    {talk && <div style={{width:"80%",margin:"auto"}}><input value={mail.email} name="email" onChange={(e)=>handleChange(e)} style={{width:"40%",marginTop:"-30%",marginBottom:"2%",height:"5vh",border:"1px solid green",textAlign:"center"}}placeholder="Please enter your mail-id"/> <button onClick={handleSubmit} style={{width:"20%",marginBottom:"2%",height:"5vh",backgroundColor:"green",color:"white"}}>Submit</button></div>} */}
-  
-   <div onClick={handleSubmit} className={styles.prtalktosales}>Talk to us now</div>
+     {!isAuth &&<div  onClick={gotosignup}className={styles.prtalktosales}>Signup to talk with us</div>}
+   {isAuth &&<div onClick={handleSubmit} className={styles.prtalktosales}>Talk to us now</div>}
   <Footer/>
   </>
   )
