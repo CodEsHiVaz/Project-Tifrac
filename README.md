@@ -9,7 +9,7 @@ TECH stack used: MongoDB, Express, React, NodeJS.
 Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
 
 <b>Pages</b>
-1) Home page
+1) <b>Home page</b>
    
    ![myremoteimage](https://i.postimg.cc/xTNxjpz8/helperhome.png)
    
@@ -19,7 +19,7 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
 
    A student can also speak to our representative by simply logging in and then clicking on the "Talk to us now" button.
 
-2) Login and signup.
+2) <b>Login and signup.</b>
 
    ![myremoteimage](https://i.postimg.cc/sXyd5d5T/helper-login.png)
 
@@ -29,7 +29,7 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
  
    Post successfull login the user will be routed to home page.
 
-3) Subjects page.
+3) <b>Subjects page.</b>
 
    ![myremoteimage](https://i.postimg.cc/m2nv8FQz/helperphysics.png)
   
@@ -37,10 +37,11 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
   
    On clicking on any topic withing the subject page the user will be able to see a list of available videos for that particular topic. We also provide the students       with cheatsheets for each and every topic. 
   
-4) Videochat.
+4) <b>Videochat.</b>
 
    ![myremoteimage](https://i.postimg.cc/YCfJkD5g/helpersalescall.png)
    
    A student can connect to our representative by simply clicking on the "Talk to us now" button. On clicking this button the student will be routed to a different        site. Here the student can simply click on the copy ID button to get his ID. Now click on the "Click here to mail" and simply paste the id into the body of the mail    and click send. Within minutes the student will receive a videocall from our representative.
 
-Netlify Deploy link :https://profound-cupcake-844742.netlify.app/
+   
+   Netlify Deploy link :https://profound-cupcake-844742.netlify.app/
