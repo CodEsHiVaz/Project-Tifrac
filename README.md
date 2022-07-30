@@ -10,7 +10,9 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
 
 <b>Pages</b>
 1) Home page
-
+   
+   ![myremoteimage](https://i.postimg.cc/xTNxjpz8/helperhome.png)
+   
    The home page has a navbar that contains routes to different subject pages and also the login and signup.
 
    It also specifies why a student should join us to sharpem their skills in the above mentioned subjects.
