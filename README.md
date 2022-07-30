@@ -19,6 +19,8 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
 
 2) Login and signup.
 
+   ![myremoteimage](https://i.postimg.cc/sXyd5d5T/helper-login.png)
+
    The login and signup is implemented with the use of context API. The data entered by the user in the login or signup section is send to the backend that is build        using Express, Mongoose ,MongoDB and NodeJS. 
  
    We have also made use of Google auth toenable user to sign up and login via his/her gmail account.
@@ -26,6 +28,8 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
    Post successfull login the user will be routed to home page.
 
 3) Subjects page.
+
+   ![myremoteimage](https://i.postimg.cc/m2nv8FQz/helperphysics.png)
   
    On clicking any subject in the navbar the student will be routed to that particular subject's page. The data for the subject comes from the backend. 
   
