@@ -39,6 +39,8 @@ Additional libraries used: http, socket.io, cors, dotenv, simple-peer.
   
 4) Videochat.
 
+   ![myremoteimage](https://i.postimg.cc/YCfJkD5g/helpersalescall.png)
+   
    A student can connect to our representative by simply clicking on the "Talk to us now" button. On clicking this button the student will be routed to a different        site. Here the student can simply click on the copy ID button to get his ID. Now click on the "Click here to mail" and simply paste the id into the body of the mail    and click send. Within minutes the student will receive a videocall from our representative.
 
 Netlify Deploy link :https://profound-cupcake-844742.netlify.app/
