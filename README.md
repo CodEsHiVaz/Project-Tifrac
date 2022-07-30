@@ -1,4 +1,5 @@
 # Project-Tifrac
+The 12th grade exams have an extreme significane in the life of a student. It can act as a pivot point in one's career especially if you are pursuing science as your subject. With so many edtech platforms available a student can get confused on where to study from. Even if you narrow down to a particular website/app you will be flodded with irrelevant information on a daily basis. Navigating to your courses can become pretty difficult in those scenarios. Hence we came up with HELPER, specifically tailored for a 12th grade science student.
 
 HELPER is a one stop destination for the students of 12th grade to sharpen their physics, chemistry, maths and biology. 
 
